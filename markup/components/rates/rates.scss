@@ -1,0 +1,129 @@
+.rates {
+    margin-bottom: 110px;
+
+    &__header {
+        margin-left: 30px;
+        margin-bottom: 50px;
+    }
+
+    @media (min-width: $breakpoint-md) {
+        .rates {
+            &__header {
+                margin-left: 60px;
+                margin-bottom: 100px;
+
+            }
+        }
+    }
+}
+
+.rates__row {
+    display: block;
+    //border: 1px solid blue;
+    @include cf;
+
+    @media (min-width: $breakpoint-md) {
+        display: flex;
+        align-items: stretch;
+    }
+}
+
+.rate-item {
+    position: relative;
+    background-color: #fff;
+    width: 100%;
+    //border: 1px solid red;
+    text-align: center;
+    padding: 24px 44px 50px;
+    box-shadow: 0 0.938rem 1.875rem rgba(0, 0, 0, 0.06);
+
+    & + & {
+        margin-top: 50px;
+    }
+
+    &:nth-child(2) {
+        box-shadow: 0 1.563rem 3.125rem rgba(165, 0, 20, 0.1);
+    }
+
+    @media (min-width: $breakpoint-md) {
+        width: 33.33333%;
+        transition: transform .3s ease-in-out;
+
+        &:hover,
+        &:focus {
+            transform: translate(0, -5px);
+        }
+
+        & + & {
+            margin-top: 0;
+        }
+
+        &:nth-child(2) {
+            top: -50px;
+            margin-left: 16px;
+            margin-right: 16px;
+        }
+    }
+    @media (max-width: $breakpoint-md) {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 400px;
+    }
+
+    &__cost {
+        font-size: 1.438rem;
+        font-weight: $f-weight-bold;
+        color: $color-primary;
+
+        &--old {
+            margin-top: -35px;
+            margin-bottom: 12px;
+            font-size: 0.938rem;
+        }
+    }
+
+    &__name {
+        font-size: 1.063rem;
+        font-weight: $f-weight-bold;
+        text-transform: uppercase;
+
+        span {
+            color: $color-primary;
+        }
+    }
+
+    &__content {
+        text-align: left;
+        margin: 28px 0 50px;
+        font-size: 0.813rem;
+    }
+
+    &__list {
+        list-style: none inside;
+        padding: 0;
+        margin: 0;
+
+        li + li {
+            margin-top: 20px;
+        }
+
+        span.small {
+            display: block;
+            font-size: 0.688rem;
+            font-weight: $f-weight-regular;
+        }
+    }
+
+    &__action {
+        position: absolute;
+        bottom: 30px;
+        left: 0;
+        right: 0;
+
+        .btn {
+            min-width: 150px;
+            min-height: 43px;
+            font-size: 0.875rem;
+        }
+    }
+}

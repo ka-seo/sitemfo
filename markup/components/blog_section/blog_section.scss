@@ -1,0 +1,16 @@
+.blog-section {
+    margin: 90px auto 50px;
+    padding: 0 15px;
+    text-align: center;
+
+    @media (min-width: $breakpoint-sm) {
+        margin: 130px auto 50px;
+    }
+
+    &__content {
+        margin: auto;
+        max-width: 450px;
+        font-size: 0.875rem;
+        line-height: 1.45em;
+    }
+}

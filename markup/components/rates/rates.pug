@@ -1,0 +1,30 @@
+mixin rates(data)
+    .container#rates-container
+        .rates
+            .rates__header
+                .title ТАРИФЫ И ЦЕНЫ
+            .rates__row
+
+                each item in data
+                    .rate-item
+                        .rate-item__cost--old
+                            strong.strike: span #{item.cost_old} ₽
+                        .rate-item__cost #{item.cost} ₽
+                        .rate-item__name
+                            | &laquo;#{item.name}
+                            if item.name_2
+                                span #{item.name_2}
+                            | &raquo;
+                        .rate-item__content
+                            ul.rate-item__list
+                                each feature in item.params
+                                    li
+                                        if feature.strong
+                                            strong #{feature.name}
+                                        else
+                                           | #{feature.name}
+
+                                        if feature.descr
+                                            span.small #{feature.descr}
+                        .rate-item__action
+                            a(href=('#'+item.alias)).btn.btn-primary #{item.buttonName}

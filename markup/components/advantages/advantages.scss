@@ -1,0 +1,22 @@
+.advantage {
+    &s {
+        list-style: none inside;
+        margin: 0;
+        padding: 0;
+
+    }
+
+    &-item {
+        position: relative;
+        padding-left: 36px;
+        font-size: 0.875rem;
+        line-height: 1.5;
+        background-repeat: no-repeat;
+        background-position: left top;
+        background-size: 20px;
+
+        & + & {
+            margin-top: 18px;
+        }
+    }
+}

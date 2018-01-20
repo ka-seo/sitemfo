@@ -1,0 +1,54 @@
+mixin form_order(data)
+    include ../switch_pages/switch_pages.pug
+
+    .container#form-container
+        .form-order__wrap
+            .form-order__title
+                | ОСТАВЬТЕ ЗАЯВКУ
+                span.highlight СЕГОДНЯ
+                br
+                | И
+                span.highlight ПОЛУЧИТЕ В ПОДАРОК
+            .form-order__gifts
+                .gift
+                    img(src="%=static=%img/content/present.svg")
+                    | Хостинг на 6 месяцев
+                .gift
+                    img(src="%=static=%img/content/present.svg")
+                    | SSL сертификат безопасности
+            form.form-order__fields#form-order(method="POST")
+                .form-group
+                    label.form-label Ваше имя
+                    input(type="text", name="username", value="").form-control
+                .form-group
+                    label.form-label Телефон
+                    input(type="tel", name="phone", value="").form-control
+                .form-group
+                    label.form-label Email
+                    input(type="email", name="email", value="").form-control
+                .form-group
+                    label.form-label Тариф
+                    select(name="rate").form-control
+                        each item, index in data
+                            if item.alias === 'start+'
+                                option(value=item.alias, selected="") #{item.name}
+                                    if item.name_2
+                                        | #{item.name_2}
+                            else
+                                option(value=item.alias) #{item.name}
+                                    if item.name_2
+                                        | #{item.name_2}
+                .form-action
+                    button(type="submit").btn.btn-primary
+                        span.sent#sent
+                        span.loading
+                            span .
+                            span .
+                            span .
+                        span.default Хочу сайт МКК
+                        span.error-send Ошибка
+            .form-order__date
+                img(src="%=static=%img/content/thumb_up.svg")
+                span#get-date.get-date к 10 ноября
+
+        +switch_pages(switch_pages.data)

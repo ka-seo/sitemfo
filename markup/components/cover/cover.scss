@@ -1,0 +1,43 @@
+.cover {
+    padding: 0 15px;
+    position: relative;
+
+    &__title {
+        font-weight: $f-weight-regular;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 1.43rem;
+        margin: 0 auto 40px;
+
+        small {
+            font-size: .875rem;
+        }
+    }
+
+    &__advantages {
+        max-width: 320px;
+        margin: 0 auto;
+
+        .time {
+            background-image: url('%=static=%assets/cover/time.svg');
+        }
+        .pc {
+            background-image: url('%=static=%assets/cover/laptop.svg');
+        }
+        .user {
+            background-image: url('%=static=%assets/cover/user.svg');
+        }
+    }
+
+    &__action {
+        text-align: center;
+        margin: 44px auto 44px;
+    }
+
+    &__img {
+        img {
+            max-width: 100%;
+        }
+    }
+}
+

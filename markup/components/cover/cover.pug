@@ -1,0 +1,24 @@
+mixin cover(data)
+    include ../advantages/advantages.pug
+    include ../parallax-cover/parallax-cover.pug
+
+    .cover
+        h1.cover__title
+            | Сайт для вашей МКК
+            | &nbsp;
+            strong.highlight за
+            | &nbsp;
+            small
+                strong.strike
+                    span 100.000₽
+            | &nbsp;
+            strong.highlight 49.900₽
+
+        ul.advantages.cover__advantages
+            li.advantage-item.time Запускается «под ключ» всего за 4 дня
+            li.advantage-item.pc Отлично работает на всех устройствах
+            li.advantage-item.user Собирает много анкет без перерывов и выходных
+        .cover__action
+            a(href='#feature').btn.btn-primary Узнать больше
+
+    +parallax-cover()

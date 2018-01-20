@@ -1,0 +1,139 @@
+.parallax {
+
+    &__item {
+        position: absolute;
+    }
+
+    &-blog {
+        display: none;
+        width: 100%;
+        height: auto;
+        left: 0;
+        right: 0;
+
+
+        @media (max-width: $breakpoint-sm) {
+            top: 0 !important;
+            position: relative;
+        }
+
+        //@media (min-width: 550px) {
+        //    position: fixed;
+        //    top: 2640px;
+        //}
+
+        @media (min-width: $breakpoint-sm) {
+            position: fixed;
+            top: 2830px; //2830
+        }
+
+        @media (min-width: $breakpoint-md) {
+            top: 2850px; //2850
+        }
+
+        @media (min-width: $breakpoint-lg) {
+            top: 2500px; //2500 ?
+        }
+
+        @media (min-width: $breakpoint-xl) {
+            top: 2630px; //2500 ?
+        }
+
+        &__buffer {
+            display: block;
+            width: 100%;
+            height: 50px;
+
+            @media (min-width: $breakpoint-sm) {
+                height: 400px;
+            }
+        }
+
+        .parallax__item {
+
+            &-1 {
+                top: 0;
+                display: none;
+
+                @media (min-width: $breakpoint-md) { left: -220px; display: block; }
+
+                @media (min-width: $breakpoint-lg) { left: -20px; }
+
+                @media (min-width: $breakpoint-xl) { left: 50px; }
+
+            }
+
+            &-2 {
+                //default value for smartphones
+
+
+                @media (max-width: $breakpoint-sm) {
+                    top: 0 !important;
+                    left: -130px !important;
+                    text-align: center;
+                    position: relative;
+
+                    img {
+                        max-width: 100%;
+                    }
+                }
+
+                @media (min-width: 370px) { left: -120px; }
+
+                @media (min-width: $breakpoint-sm) { left: -50px; }
+
+                @media (min-width: $breakpoint-md) { left: 35px; }
+
+                @media (min-width: $breakpoint-lg) { left: 165px; }
+
+                @media (min-width: $breakpoint-xl) { left: 260px; }
+
+            }
+
+            &-3 {
+                top: 0;
+                display: none;
+
+                @media (min-width: $breakpoint-md) { right: -20px; top: 0;  }
+
+                @media (min-width: $breakpoint-lg) { right: 170px; display: block;}
+
+                @media (min-width: $breakpoint-xl) { right: 240px; }
+            }
+
+            &-3-a {
+                top: 200px;
+                display: none;
+                right: -70px;
+
+                //@media (min-width: 370px) { right: 10px; }
+
+
+                @media (max-width: $breakpoint-sm) {
+                    display: block;
+                    top: -40px!important;
+                    right: 0;
+                    width: 100px;
+                    overflow: hidden;
+                }
+
+
+                @media (min-width: $breakpoint-sm) { right: -30px; display: block; }
+                @media (min-width: $breakpoint-md) { right: 40px; }
+                @media (min-width: $breakpoint-lg) { display: none; }
+            }
+
+            &-4 {
+                top: 0;
+                right: -100px;
+                display: none;
+
+                @media (min-width: $breakpoint-md) { right: -220px; display: block; }
+
+                @media (min-width: $breakpoint-lg) { right: -30px; }
+
+                @media (min-width: $breakpoint-xl) { right: 40px; }
+            }
+        }
+    }
+}

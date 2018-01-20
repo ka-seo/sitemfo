@@ -1,0 +1,46 @@
+.header {
+    padding: 36px 16px 0;
+    margin-bottom: 46px;
+    width: 100%;
+    @include cf;
+
+    &__left,
+    &__right {
+        //border: 1px solid #ccc;
+    }
+    &__left {
+        display: none;
+    }
+
+    &__right {
+
+    }
+}
+
+.logo {
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: $color-base;
+    span {
+        font-weight: $f-weight-bold;
+    }
+
+}
+
+
+@media (min-width: $breakpoint-sm) {
+    .header {
+        padding: 46px 46px 0;
+        margin-bottom: 78px;
+
+        &__left {
+            display: block;
+            float: left;
+        }
+
+        &__right {
+            float: right;
+            text-align: right;
+        }
+    }
+}
